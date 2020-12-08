@@ -49,7 +49,12 @@ const StartGameScreen = (props) => {
       <Card style={styles.output}>
         <Text>Chosen Number</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button title="START GAME" />
+        <Button
+          title="START GAME"
+          onPress={() => {
+            props.onStartGame(selectedNumber);
+          }}
+        />
       </Card>
     );
   }
@@ -127,7 +132,7 @@ const styles = StyleSheet.create({
   },
   output: {
     marginTop: 20,
-    backgroundColor: "#f2f2b3",
+    backgroundColor: "#c9f29d",
     alignItems: "center",
   },
 });
